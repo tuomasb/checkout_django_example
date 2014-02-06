@@ -1,0 +1,10 @@
+<html>
+<body>
+	<form action='https://payment.checkout.fi/' method='post'>
+		{% for fieldname, fieldvalue in formfields.items %}
+                <input type='hidden' name='{{ fieldname }}' value='{{ fieldvalue }}'>
+                {% endfor %}
+		<input type='submit' value='Siirry maksusivulle'>
+	</form>
+</body>
+</html>
